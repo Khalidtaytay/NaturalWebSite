@@ -330,3 +330,74 @@ p{
 .icon:hover{
     color:white;
 }
+
+/*======================================================================================*/
+
+@media (max-width: 1163px) {
+    [class*='media'] {
+        position: relative;
+        width: 99%;
+        height: 400px;
+        left: 0px;
+    }
+    [class*='text'] {
+        width: 90%;
+        position: relative;
+        height: auto;
+        font-size: 15px;
+        font-weight: 400;
+        left: 0;
+        text-align: center; /* Center text horizontally */
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* Center content vertically */
+    }
+    .section2-1 {
+        display: flex;
+        align-items: center;
+        flex-direction: column-reverse;
+        position: relative;
+        height: 100%;
+    }
+    .media1 {
+        animation: none;
+        width: 115%;
+        opacity: 1;
+        margin: 0;
+        padding: 0;
+    }
+    .text1 {
+        margin: 0;
+        padding: 0;
+        opacity: 1;
+        animation: none;
+        position: relative;
+        text-align: start;
+    }
+    .media2 {
+        opacity: 1;
+      animation: none;
+    }
+    .text2 {
+        opacity:1 ;
+        width: 90%;
+        animation: none;
+        text-align: start;
+    }
+    .text1 h2{
+        font-size: 20px;
+        position: absolute;
+        top: -405px;
+    }
+    .text2 h2{
+        font-size: 20px;
+        position: absolute;
+        top: -405px;
+    }
+    .section2-2 {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        position: relative;
+    }
+}

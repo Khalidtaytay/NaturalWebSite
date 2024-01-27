@@ -50,7 +50,7 @@ function slowScroll(targetPosition) {
     isAnimating = true;
 
     const startScroll = window.scrollY;
-    const duration =1000; // 10 seconds
+    const duration =2000; // 10 seconds
     const startTime = performance.now();
 
     function animateScroll(currentTime) {
