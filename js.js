@@ -36,9 +36,9 @@ background123.forEach((bg) => {
 //scroll dow
 document.querySelector('.btn').addEventListener('click', function() {
     // Scroll down to 70% of the page height with slow and smooth effect
-    const targetPercentage = 0.267;
+    const targetPercentage = 1;
     const targetPosition = document.body.scrollHeight * targetPercentage;
-    slowScroll(targetPosition, 1500);
+    slowScroll(targetPosition, 10000);
 });
 
 function slowScroll(targetPosition, duration) {
