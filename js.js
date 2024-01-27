@@ -13,7 +13,6 @@ requestAnimationFrame(raf)
 
 let backgrounds = document.querySelector('.backgrounds');
 let background123 = document.querySelectorAll('div[class*="background"]');
-let button = document.querySelector('.btn');
 
 //cover image effect
 
@@ -33,30 +32,40 @@ background123.forEach((bg) => {
     }, 0);
 });
 
-//scroll dow
-document.querySelector('.btn').addEventListener('click', function() {
-    // Scroll down to 70% of the page height with slow and smooth effect
-    const targetPercentage = 1;
-    const targetPosition = document.body.scrollHeight * targetPercentage;
-    slowScroll(targetPosition, 10000);
+//scroll down
+const button = document.querySelector('.btn');
+let isAnimating = false;
+
+button.addEventListener('click', function() {
+    if (!isAnimating) {
+        const targetPercentage = 0.241;
+        const targetPosition = document.body.scrollHeight * targetPercentage;
+        slowScroll(targetPosition);
+    } else {
+        isAnimating = false; // Stop the current animation if the button is clicked again
+    }
 });
 
-function slowScroll(targetPosition, duration) {
-    const startPosition = window.scrollY;
+function slowScroll(targetPosition) {
+    isAnimating = true;
+
+    const startScroll = window.scrollY;
+    const duration =1000; // 10 seconds
     const startTime = performance.now();
 
     function animateScroll(currentTime) {
         const elapsed = currentTime - startTime;
         const progress = Math.min(elapsed / duration, 1);
-        const newPosition = startPosition + (targetPosition - startPosition) * progress;
+        const newPosition = startScroll + (targetPosition - startScroll) * progress;
 
         window.scrollTo(0, newPosition);
 
-        if (progress < 1) {
+        if (progress < 1 && isAnimating) {
             requestAnimationFrame(animateScroll);
+        } else {
+            isAnimating = false; // Reset the flag when the animation is complete
         }
     }
 
     requestAnimationFrame(animateScroll);
 }
-button.addEventListener('click',scrolldown)

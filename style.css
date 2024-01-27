@@ -21,7 +21,7 @@ body{
     flex-direction: column;
     position: relative;
     font-family: 'Rubik', sans-serif;
-    color: #202938;
+    color: white;
     font-size: 27px;
     font-weight: bolder;
     align-items: center;
@@ -64,14 +64,15 @@ span{
     width: 100%;
     left: 0;
 }
-.background1{background: url(Media/montagne.png);}
-.background2{background: url(Media/ice1.png);}
-.background3{background: url(Media/ice2.png);}
+.background0{background: url(Media/sky.png);}
+.background1{background: url(Media/ice1.png);}
+.background2{background: url(Media/ice2.png);}
+.background3{background: url(Media/Frame\ 6.png);}
 
 /*=================================================*/
 .bar{
     position: relative ;
-    top: 30dvh; 
+    top: 20dvh; 
     display: flex;
     justify-content: center;
 
@@ -81,20 +82,49 @@ span{
     flex-wrap: wrap;
 }
 div ul li{
-    margin: 20px 40px;
+    margin: 0px 40px;
     list-style: none;
     cursor: pointer;
     font-family: Arial, Helvetica, sans-serif;
     color: #C3A955;
+    display: flex;
+    justify-content: center;
 }
+div ul li:hover::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    height: 4px;
+    width: 100px;
+    background: #C3A955;
+    animation: underBar 0.5s ease-in-out;
+}
+@keyframes underBar{
+    from{
+        height: 4px;
+        width: 0px;
+    }
+    to{
+        height: 4px;
+        width: 100px;
+    }
+}
+
 /*=================================================*/
 .section2{
     position: relative;
     top: 270px;
 }
+h2{
+    font-family: 'Poppins', sans-serif;
+    color: #B2A05A;
+}
+p{
+    text-indent: 20px;
+}
 [class*='section2-']{
     display: flex;
-    height: 66dvh;
+    height: 78dvh;
     justify-content: space-between;
     position: relative;
     margin: 0;
@@ -112,7 +142,6 @@ div ul li{
 [class*='text']{
     width: 650px;
     height: 500px;
-    font-family: Arial, Helvetica, sans-serif;
     font-family: 'Poppins', sans-serif;
     position: relative;
     font-size: 20px;
@@ -130,7 +159,7 @@ div ul li{
     animation: viewMedia1 linear forwards;
     animation-timeline: view();
     animation-range-start:bottom 0;
-    animation-range-end:50%;
+    animation-range-end:35%;
 }
 @keyframes viewMedia1{
     from{
@@ -148,7 +177,7 @@ div ul li{
     animation: viewText1 linear forwards;
     animation-timeline: view();
     animation-range-start:bottom 0;
-    animation-range-end:50%;
+    animation-range-end:35%;
 }
 @keyframes viewText1{
     from{
@@ -168,7 +197,7 @@ div ul li{
     animation: viewMedia2 linear forwards;
     animation-timeline: view();
     animation-range-start:bottom 0;
-    animation-range-end:50%;
+    animation-range-end:35%;
 }
 @keyframes viewMedia2{
     from{
@@ -185,7 +214,7 @@ div ul li{
     animation: viewText2 linear forwards;
     animation-timeline: view();
     animation-range-start:bottom 0;
-    animation-range-end:50%;
+    animation-range-end:35%;
 }
 @keyframes viewText2{
     from{
