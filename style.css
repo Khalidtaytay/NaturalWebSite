@@ -440,3 +440,15 @@ p{
 
 /*======================================================================================*/
 
+@media(max-width:500px){
+    .background0{background: url(Media/sky.png);}
+    .background1{background: url(Media/ice1.png);}
+    .background2{background: transparent;}
+    .background3{background: transparent;}
+    .titre{
+        text-align: center;
+    }
+    .section3-title{
+        padding: 10px;
+    }
+}
