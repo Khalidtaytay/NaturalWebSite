@@ -207,7 +207,7 @@ p{
     color:white;
 }
 
-@media(max-width:500px){
+@media(max-width:700px){
     .background0{background: url(Media/sky.png);}
     .background1{background: url(Media/ice1.png);}
     .background2{background: transparent;}
